@@ -1,3 +1,3 @@
-# examplesAndroid
+# ExamplesAndroid
 
 Training examples for Android
