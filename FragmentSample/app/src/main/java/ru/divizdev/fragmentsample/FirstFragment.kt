@@ -3,6 +3,7 @@ package ru.divizdev.fragmentsample
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,8 +27,11 @@ class FirstFragment : LogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        button_back.setOnClickListener { fragmentManager?.popBackStack() }
+        button_back.setOnClickListener {
+            Log.i("lifecycle " + this.javaClass.name, "---button_back")
+            fragmentManager?.popBackStack() }
         button_next.setOnClickListener {
+            Log.i("lifecycle " + this.javaClass.name, "---button_next")
             fragmentManager
                 ?.beginTransaction()
                 ?.add(R.id.fragment_container, SecondFragment(), "SECOND_FRAGMENT")

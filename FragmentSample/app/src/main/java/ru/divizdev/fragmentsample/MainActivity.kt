@@ -2,6 +2,7 @@ package ru.divizdev.fragmentsample
 
 import android.net.Uri
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity(), OnFragmentInteractionListener {
@@ -23,5 +24,8 @@ class MainActivity : AppCompatActivity(), OnFragmentInteractionListener {
 
     }
 
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
 
+    }
 }
