@@ -3,6 +3,7 @@ package ru.divizdev.fragmentsample
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,14 +32,19 @@ class LastFragment : LogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         button_next.setOnClickListener {
+            Log.i("lifecycle " + this.javaClass.name, "---button_next")
             fragmentManager
                 ?.beginTransaction()
                 ?.replace(R.id.fragment_container, FirstFragment(), "FIRST_FRAGMENT")
                 ?.addToBackStack("")
                 ?.commit()
         }
-        button_back.setOnClickListener { fragmentManager?.popBackStack() }
+        button_back.setOnClickListener {
+            Log.i("lifecycle " + this.javaClass.name, "---button_back")
+            fragmentManager?.popBackStack()
+        }
         button_go_to_first.setOnClickListener {
+            Log.i("lifecycle " + this.javaClass.name, "---button_go_to_first")
             val findFragmentByTag = fragmentManager?.findFragmentByTag("FIRST_FRAGMENT")
             if (findFragmentByTag != null) {
                 fragmentManager
@@ -67,6 +73,10 @@ class LastFragment : LogFragment() {
     override fun onDetach() {
         super.onDetach()
         listener = null
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
     }
 
     companion object {
