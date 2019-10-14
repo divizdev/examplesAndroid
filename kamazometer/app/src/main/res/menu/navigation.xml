@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_driver"
+        android:icon="@drawable/ic_account_box_black_24dp"
+        android:title="@string/title_driver" />
+
+    <item
+        android:id="@+id/navigation_truck"
+        android:icon="@drawable/ic_if_truck_115775"
+        android:title="@string/title_truck" />
+
+    <item
+        android:id="@+id/navigation_start"
+        android:icon="@drawable/ic_if_play_1348648"
+        android:title="@string/title_start" />
+    <item
+        android:id="@+id/navigation_history"
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="@string/title_history" />
+    <item
+        android:id="@+id/navigation_message"
+        android:icon="@drawable/ic_message_black_24dp"
+        android:title="@string/title_message" />
+
+</menu>

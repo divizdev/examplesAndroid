@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".presentation.chat.ChatFragment">
+
+    <com.stfalcon.chatkit.messages.MessagesList
+        android:id="@+id/messagesList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        app:incomingTextColor="@color/black"
+        app:incomingTextSize="14sp"
+        app:outcomingDefaultBubbleColor="@color/colorChat"
+        app:outcomingTextSize="14sp"
+        app:outcomingTextColor="@color/black"
+        app:outcomingTimeTextColor="@color/black"
+        />
+
+    <com.stfalcon.chatkit.messages.MessageInput
+        android:id="@+id/inputView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:inputHint="Введите сообщение"
+        app:inputButtonMargin="16dp"
+        app:inputButtonWidth="30dp"
+        app:inputMaxLines="3"
+        app:inputTextColor="@color/black"
+        app:inputTextSize="18sp"
+        app:inputButtonHeight="30dp"
+
+
+        />
+
+</LinearLayout>
